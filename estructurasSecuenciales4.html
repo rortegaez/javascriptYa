@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 1</title>
+    </head>
+    <body>
+
+        <script>
+//declaramos la variable
+            let precio;
+            let cantidad;
+            let cliente;
+            let total;
+            let resto;
+
+//le damos el valor a la varible
+            precio=prompt('El producto vale?');
+            cantidad=prompt('Cuantos llevas?')
+            cliente=prompt('El cliente me entrega');
+
+//creamos nuevas variables para hacer la suma y el producto. parseInt transforma una cadena de texto en un número natural
+            total=parseInt(precio)*parseInt(cantidad);
+            resto=parseInt(cliente)-parseInt(total);
+
+//enseñamos el resultado con document.write
+            document.write('El producto cuesta ' + precio + ' y usted lleva ' + cantidad + ' es total es: ' + total + '. Usted me entrega ' + cliente + ' con lo cual es resto es: ' + resto + '.');
+        </script>
+
+    </body>
+</html>
