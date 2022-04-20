@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <script>
+
+        let coordenadax=parseInt(prompt('Introduce la coordenada x'));
+        let coordenaday=parseInt(prompt('Introduce la coordenada y'));
+
+        if(coordenadax>0 && coordenaday<0){
+            document.write('Se encuentra en el primer cuadrante');
+        }else{
+            if(coordenadax<0 && coordenaday>0){
+                document.write('Se encuentra en el segundo cuadrante');
+            }else{
+                document.write('Se encuentra fuera de cuadrante');
+            }
+        }
+    </script>
+
+</body>
+</html>

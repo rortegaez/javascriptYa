@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <script>
+
+        let sueldo=parseInt(prompt('Indica su sueldo'));
+        let tiempo=parseInt(prompt('Indique años de antigüedad'));
+        let nuevosueldo;
+
+        if(sueldo<500 && tiempo>=10){
+            nuevosueldo=sueldo*1.2;
+            document.write('Su sueldo actual pasa a ser: '+ nuevosueldo);
+        }else{
+            if(sueldo<=500 && tiempo<10){
+                nuevosueldo=sueldo*1.05;
+                document.write('Su sueldo actual pasa a ser: ' + nuevosueldo);
+            }else{
+                document.write('No es perceptible un aumento de sueldo');
+            }
+        }
+
+    </script>
+
+</body>
+</html>
