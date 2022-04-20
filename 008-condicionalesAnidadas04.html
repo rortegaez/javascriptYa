@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <script>
+
+        let nombre=prompt('Introduce su nombre');
+        let preguntas=parseInt(prompt('Número de preguntas'));
+        let correctas=parseInt(prompt('Las preguntas correctas son'));
+
+        let porcentaje=correctas*100/preguntas;
+
+        document.write(porcentaje);
+
+        if(porcentaje>=90){
+            document.write('Nivel superior');
+        }else{
+            if(porcentaje>=75){
+                document.write('Nivel medio');
+            }else{
+                if(porcentaje>=50){
+                    document.write('Nivel regular');
+                }else{
+                    document.write('Fuera de nivel');
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>
