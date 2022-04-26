@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Concepto Acumulado n.13 part 3</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            
+            let x=1;
+            let y=1;
+
+            let lista1=0;
+            let lista2=0;
+
+            let suma1=0;
+            let suma2=0;
+
+            while(x<=3){
+                lista1=parseInt(prompt('Ingrese los número de la lista 1'));
+                suma1=suma1+lista1;
+                x=x+1;
+            }
+
+            while(y<=3){
+                lista2=parseInt(prompt('Ingrese los número de la lista 2'));
+                suma2=suma2+lista2;
+                y=y+1;
+            }
+
+            if(suma1>suma2){
+                document.write('La lista 1 es mayor');
+            }else{
+                if(suma1==suma2){
+                    document.write('Ambas listas son iguales');
+                }else{
+                    document.write('La lista 2 es mayor');
+                }
+            }
+
+        </script>
+    </body>
+</html>

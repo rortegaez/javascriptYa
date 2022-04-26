@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio acumulador JavaScript</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+
+            let x=1;
+            let num=0;
+
+            let pares=0;
+            let impares=0;
+// (num%2==0) el operador % nos retorna el resto de una división, en esta caso de la división por 2. Entonces si igualamos a 0 será un número par, si no será un número impar.
+            while(x<=5){
+                num=parseInt(prompt('Ingrese el valor'));
+                if(num%2==0){
+                    pares=pares+1;
+                }else{
+                    impares=impares+1;
+                }
+                x=x+1;
+            }
+
+            document.write('De los números ingresado, ' + pares + ' son pares y ' + impares + ' son impares');
+        </script>
+    </body>
+</html>

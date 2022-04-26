@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Concepto Acumulado n.13 part 3</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            
+            let x=1;
+            let sueldo=0;
+
+            let mayortres=0;
+            let entrecienytres=0;
+
+            let suma=0;
+
+            while(x<=5){
+                sueldo=parseInt(prompt('Ingrese sueldo'));
+                if(sueldo>=500){
+                    mayortres=mayortres+1;
+                }else{
+                    entrecienytres=entrecienytres+1;
+                }
+                suma=suma+sueldo;
+                x=x+1;
+            }
+
+            document.write('Tenemos ' + mayortres + ' trabajadores que ganan más de 500€ y tenemos ' + entrecienytres + ' trabajadores que estaán ganando entre 200€ y 300€. En total gastamos en personal ' + suma + '€.');
+
+        </script>
+    </body>
+</html>

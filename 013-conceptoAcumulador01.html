@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio Acumulador n.13</title>
+        <meta charset="UTL-8">
+    </head>
+    <body>
+        <script>
+//la variable x es para indicar el número de repeticiones que se deben de hacer y la variable nota para ingresar los datos, en esta caso las notas de los alumnos.
+            let x=1;
+            let nota;
+//con las variables mayor7 y menor7, las hemos utilizado para incluir un if que en cada vuelta, sumaba a una de esa variable los alumnos con las notas menor o menor a lo indicado.
+            let mayor7=0;
+            let menor7=0;
+
+            while (x<=10){
+                nota=prompt('Ingrese la nota del alumno');
+                if(nota>=7){
+                    mayor7=mayor7+1;
+                }else{
+                    menor7=menor7+1;
+                }
+                x=x+1;
+            }
+
+            document.write('Ha habido ' + mayor7 + ' alumnos con una nota mayor a 7, y ' + menor7 + ' alumnos con una nota menor a 7.');
+        </script>
+    </body>
+</html>
