@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio do/while 01</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+
+            let num;
+
+            do{
+                num=parseInt(prompt('Ingrese el valor' + '<br>'));
+                if(num<0){
+                    document.write('El valor es menor a 0' + '<br>');
+                }else{
+                    if(num>0){
+                        document.write('el valor es mayor a 0' + '<br>');
+                    }else{
+                        document.write('El valor es igual a 0' +'<br>');
+                    }
+                }
+            }while(num!=9999);
+        </script>
+    </body>
+</html>
