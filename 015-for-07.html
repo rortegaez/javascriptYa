@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            let num=0;
+
+            let positivos=0;
+            let negativos=0;
+            let multi=0;
+
+            let suma=0;
+
+            for(let f=0;f<=10;f++){
+                num=parseInt(prompt('Ingrese valor'));
+
+                if(num<0){
+                    negativos++;
+                }else{
+                    positivos++;
+                    }
+
+                if(num%5==0){
+                    multi++;
+                }
+
+                if(num%2==0){
+                    suma=num+suma;
+                }
+            }
+
+            document.write(positivos + '<br>');
+            document.write(negativos + '<br>');
+            document.write(suma + '<br>');
+            document.write(multi);
+            
+            
+        </script>
+
+    </body>
+</html>

@@ -1,1 +1,62 @@
- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            let manana;
+            let tarde;
+            let noche;
+
+            let sumaman=0;
+            let sumatar=0;
+            let sumanoc=0;
+
+            let promedioman;
+            let promediotar;
+            let promedionoc;
+//No pongo la impresión de los promedios entre los bucles porque me da problemas.
+            for(let f=0;f<5;f++){
+                manana=parseInt(prompt('Ingrese edad turno mañana'));
+                sumaman=manana+sumaman;
+                promedioman=sumaman/5;
+            }
+
+            for(let g=0;g<6;g++){
+                tarde=parseInt(prompt('Ingrese edad turno tarde'));
+                sumatar=tarde+sumatar;
+                promediotar=sumatar/6;
+            }
+
+            for(let h=0;h<11;h++){
+                noche=parseInt(prompt('Ingrese edad turno noche'));
+                sumanoc=noche+sumanoc;
+                promedionoc=sumanoc/11;
+            }
+
+            document.write('mañana ' + promedioman + '<br>');
+            document.write('tarde ' + promediotar + '<br>');
+            document.write('noche ' + promedionoc + '<br>');
+
+            if(promedioman>promediotar && promedioman>promedionoc){
+                document.write('El turno de mañana tiene el promedio de edad mayor');
+            }else{
+                if(promediotar>promedioman && promediotar>promedionoc){
+                    document.write('El turno de tarde tiene el promedio de edad mayor');
+                }else{
+                    document.write('El turno de noche tiene el promedio de edad mayor');
+                }
+            }
+
+            
+            
+            
+            
+        </script>
+
+    </body>
+</html>

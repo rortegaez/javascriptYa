@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>       
+        
+            let ladoA=0;
+            let ladoB=0;
+            let ladoC=0;
+
+            equilatero=0;
+            isosceles=0;
+            escaleno=0;
+
+            for(let f=0;f<4;f++){
+                ladoA=parseInt(prompt('Ingrese el lado A'));
+                ladoB=parseInt(prompt('Ingrese el lado B'));
+                ladoC=parseInt(prompt('Ingrese el lado C'));
+
+                if(ladoA===ladoB && ladoB===ladoC){
+                    equilatero++;
+                }else{
+                    if(ladoA===ladoB || ladoB===ladoC || ladoA===ladoC){
+                        isosceles++;
+                    }else{
+                        escaleno++;
+                    }
+                }
+            }
+
+            document.write('Hay ' + equilatero +' trianguloes equiláteros, hay ' + isosceles + ' triángulos isósceles y ' + escaleno + ' triángulos escalenos.' + '<br>');
+
+            if(equilatero<isosceles && equilatero<escaleno){
+                    document.write('Hay menos triángulos del tipo equilátero' + '<br>');
+                }else{
+                    if(isosceles<equilatero && isosceles<escaleno){
+                        document.write('Hay menos triangulos isósceles <br>');
+                    }else{
+                        document.write('Hay menos triángulos del tipo escaleno');
+                    }
+                }
+        </script>
+
+    </body>
+</html>

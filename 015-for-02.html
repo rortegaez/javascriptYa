@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            let num;
+            let suma=0;
+
+            for(let f=1;f<=10;f++){
+                num=parseInt(prompt('Ingrese un número'));
+                if(f>=6 && f<=10){
+                    //document.write('ok');, utilizado para comprobar que el condicional estaba funcionando correctamente.
+                    suma=num + suma;
+                }
+                
+                document.write(num + ' ');
+            }
+            document.write(suma);
+
+            
+        </script>
+
+    </body>
+</html>
