@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            function fechaCompleta(){
+                //en vez de hacerlo en dos pasos, lo hago en la misma línea.
+                let fecha=new Date();
+                document.write('Hoy es ');
+                let dia=fecha.getDay();
+                switch(dia){
+                    case 0:
+                        document.write('domingo ');
+                        break;
+                    case 1:
+                        document.write('lunes ');
+                        break;
+                    case 2:
+                        document.write('martes ');
+                        break;
+                    case 3:
+                        document.write('miercoles ');
+                        break;
+                    case 4:
+                        document.write('jueves ');
+                        break;
+                    case 5:
+                        document.write('viernes ');
+                        break;
+                    case 6:
+                        document.write('sabado' );
+                        break;
+                }
+                document.write(fecha.getDate() + ' de ');
+                let mes=fecha.getMonth();
+                switch(dia){
+                    case 0:
+                        document.write('enero ');
+                        break;
+                    case 1:
+                        document.write('febrero ');
+                        break;
+                    case 2:
+                        document.write('mmarzo ');
+                        break;
+                    case 3:
+                        document.write('abril ');
+                        break;
+                    case 4:
+                        document.write('mayo ');
+                        break;
+                    case 5:
+                        document.write('junio ');
+                        break;
+                    case 6:
+                        document.write('julio ');
+                        break;
+                    case 7:
+                        document.write('agosto ');
+                        break;
+                    case 8:
+                        document.write('septiembre ');
+                        break;
+                    case 9:
+                        document.write('octubre ');
+                        break;
+                    case 10:
+                        document.write('noviembre ');
+                        break;
+                    case 11:
+                        document.write('diciembre ');
+                        break;
+                }
+                document.write(fecha.getFullYear() + '.');
+
+                
+            }
+
+            fechaCompleta();
+            
+        </script>
+
+    </body>
+</html>

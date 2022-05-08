@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+//Elaborar una función a la cual le envíe el valor del lado de un cuadrado y re retorne el perímetro.
+            function cuadrado(lado){
+                let a=lado*4;
+                return a;
+            }
+
+            let lado=parseInt(prompt('Introduce el lado del cuadrado'));
+            document.write('El lado del cuadrado es: ' + lado + '. Entonces su área es: ');
+            let area=cuadrado(lado);
+            document.write(area);
+
+            
+            
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            function calPromedio(x1,x2,x3){
+                let a=x1+x2+x3;
+                let b=a/3;
+                return b;
+            }
+
+            let num1=parseInt(prompt('Ingrese el primer valor'));
+            let num2=parseInt(prompt('Ingrese el segundo valor'));
+            let num3=parseInt(prompt('Ingrese el tercer valor'));
+
+            document.write('El valor promedio de los números: ' + num1 + ', ' + num2 + ', ' + num3 + '. ');
+            let promedio=calPromedio(num1,num2,num3);
+            document.write('El resultado es: ' + promedio);
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            function delOrdenados(num1,num2,num3){
+                //con esta anidado de if, hemos realizado el algoritmos para poner en orden de maner a mayor tres números enteros.
+                if(num1<num2 && num1<num3){
+                    document.write(num1 + ' ');                
+                    if(num2<num3){
+                        document.write(num2 + ' ' + num3);
+                    }else{
+                        document.write(num3 + ' ' + num2);
+                    }
+                }else{
+                    if(num2<num3){
+                        document.write(num2 + ' ');
+                        if(num1<num3){
+                            document.write(num1 + ' ' + num3);
+                        }else{
+                            document.write(num3 + ' ' + num1);
+                        }
+                    }else{
+                        document.write(num3 + ' ');
+                        if(num1<num3){
+                            document.write(num1 + ' ' + num2);
+                        }else{document.write(num2 + ' ' + num1);
+
+                        }
+                    }
+                }
+            }
+            
+            let num1=parseInt(prompt('Ingrese el primer valor'));
+            let num2=parseInt(prompt('Ingrese el primer valor'));
+            let num3=parseInt(prompt('Ingrese el primer valor'));
+            document.write('Los tres valores ingresados son: ' + num1 + ',' + num2 + ',' + num3 + '. <br>');
+            document.write('Los valores ordenadores de menor a mayor son: ');
+
+
+            delOrdenados(num1,num2,num3);
+            
+            </script>
+
+    </body>
+</html>

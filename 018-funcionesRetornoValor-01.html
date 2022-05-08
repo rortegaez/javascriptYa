@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+//Confeccionar una función a la cual le envíe tres enteros y retorne el mayor de ellos.
+            function retornoMayor(x1,x2,x3){
+                if(x1>x2 && x1>x3){
+                    return x1;
+                }else{
+                    if(x2>x3){
+                        return x2;
+                    }else{
+                        return x3;
+                    }
+                }
+            }
+
+            let valor1=parseInt(prompt('Ingrese el primer termino'));
+            let valor2=parseInt(prompt('Ingrese el primer termino'));
+            let valor3=parseInt(prompt('Ingrese el primer termino'));
+
+            document.write('El valor mayore de ' + valor1 + ', ' + valor2 + ', ' + valor3 + '.');
+            //debemos crear la variable mayor, porque el retorno debe de guardarse en una variable nueva. Ya que retornoMayor tiene sus parametros.
+            let mayor=retornoMayor(valor1,valor2,valor3);
+            document.write('El mayor de los tres es: ' + mayor);
+
+            
+            
+            
+        </script>
+
+    </body>
+</html>

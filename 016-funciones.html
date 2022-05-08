@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+//la estructura while no es necesaria en el ejercicio, pero la he añadido, para que así se introduzca obligatoriamente los números en orden correcto y no nos de error.
+            function mostrarNum(){
+                let numMenor=parseInt(prompt('Indique el número menor'));
+                let numMayor=parseInt(prompt('Indique el número mayor'));
+                while(numMenor>numMayor){
+                    document.write('Números incorrecto, escribe primero el menor <br>');
+                    numMenor=parseInt(prompt('Indique el número menor'));
+                    numMayor=parseInt(prompt('Indique el número mayor'));
+                }
+                document.write('Orden correcto <br>');
+//como numMenor es menor que numMayor obligatoriamente, numMenor puede ser donde empiece el for y termine el el numMayor.
+                for(let f=numMenor;f<=numMayor;f++){
+                    document.write(f + ' ');
+                }
+                //error
+                /*for(let f=0;f<=numMayor-numMenor;f++){
+                    let tabla=numMenor+1;
+                    document.write(tabla + ' ');
+                }*/
+            }
+            
+            mostrarNum();
+        </script>
+
+    </body>
+</html>

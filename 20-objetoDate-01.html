@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+//getMonth() nos devuelve en el mes que estamos con un valor de 0 a 11,por ello, le sumamos 1 para que sea como los como los meses correcto. 
+            function cuadranteMes(){
+                let mes
+                mes=new Date();
+                if(mes.getMonth()+1<=4){
+                    document.write('Estamos en el primer cuadrante');
+                }else{
+                    if(mes.getMonth()+1<=8){
+                        document.write('Estamos en el segundo cuadrante');
+                    }else{
+                        document.write('Estamos en el cuarto cuadrante');
+                    }
+                }
+            }
+
+            cuadranteMes();
+            
+        </script>
+
+    </body>
+</html>
