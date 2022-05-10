@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            let nombre;
+            let cant=0;
+
+            do{
+                nombre=prompt('Introduce el nombre(Escribe Fin para terminar)');
+                cant++
+                //Hemos pasado todos los nombre a mayusculas, y la palabra con el que termina el proceso lo hemos peusto en mayusculas. Así, lo pongamos de cualqueir manera, para el programa estará en mayúsculas.
+                nombre=nombre.toUpperCase();
+            }while(nombre!='FIN');
+            //Descontamos la palabra fin de la variable cant
+            cant--
+            document.write('Se ingresaron ' + cant + ' palabras.');
+            
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            let word;
+
+            /*Con este ejercicio, indico las palabras escritas y se termina escribiendo fin. Pero no cuento la cantidad de palabras que se han escrito.
+            
+            while(word!='Fin'){
+                word=prompt('Ingrese la palabra');
+                if(word==='Fin'){
+                    document.write('Ya hemos terminado');
+                }else{
+                    document.write('Los nombres escritos son: ' + word + '.<br>');
+                }
+            }*/
+
+            let nombre;
+            let cant=0;
+
+            do{
+                nombre=prompt('Introduce el nombre(Escribe Fin para terminar)');
+                cant++
+            }while(nombre!='Fin');
+            //Descontamos la palabra fin de la variable cant
+            cant--
+            document.write('Se ingresaron ' + cant + ' palabras.');
+            
+        </script>
+
+    </body>
+</html>

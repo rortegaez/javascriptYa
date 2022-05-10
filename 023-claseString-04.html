@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            let palabra;
+            palabra=prompt('Ingrese el palándromo');
+            let cant=0;
+            let f;
+            //utilizamos un bucle for para analizar toda la palabra y luego como parametro de charAt(palabra.length-1-f), esto nos esta revisando la palabra al reves y comprobando que sea las mismas letras. Al final hemos ido sumando a la varible cant, que al ser del mismo tamaño que la longitud de la palabra. La palabra es un palándromo.
+            for(f=0;f<=palabra.length;f++){
+                if(palabra.charAt(f)==palabra.charAt(palabra.length-f)){
+                    cant++;
+                    //El comparativo esta correcto, como esta puesto ahora, pero el problema es que el palabra.length, nos da un número mayor que veces que se realice al bucle for.
+                    document.write(palabra.charAt(f) + ' ' + palabra.charAt(palabra.length-f) + '<br>');
+                    document.write(palabra.length);
+                }               
+            }
+
+            /*let pala=palabra.charAt(0);
+            let palo=palabra.charAt(3);
+            document.write(pala + ' ' + palo);*/
+
+            /*if(cant==palabra.length){
+                document.write(palabra + ' se lee igual en ambas direcciones');
+            }else{
+                document.write(palabra + ' no se lee igual en ambas direcciones');
+            }*/
+            
+        </script>
+
+    </body>
+</html>

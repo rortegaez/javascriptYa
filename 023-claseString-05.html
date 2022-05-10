@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            //comprobar la arroba del if
+
+            function comprobar(mail){
+                let arroba=mail.indexOf('@');
+                if(arroba!=1){
+                    document.write('Es una dirección de mail correcta');
+                }else{
+                    document.write('Introduce correctamente el email');
+                }
+            }
+
+            let mail=prompt('Ingrese su email');
+            comprobar(mail);
+
+            
+        </script>
+
+    </body>
+</html>

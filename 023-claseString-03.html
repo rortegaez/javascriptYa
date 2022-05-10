@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            //incluimos el string en una variable, luego ponemos otra variable que es sobre la que vamos a aplicar la clase .search, que nos está indicando en que posición donde se encuentra la palabra que esta por parametro. Y esa segunda variable guarda la posición que le devuelve la clase. El ejercicio decía que debía de incluirse por pantalla tanto la fresa, como el texto a buscar.
+            /*let texto='Igual al anterior, pero que termine la aplicación sin contemplar mayúsculas ni minísculas. Es decir que para salir se pueda teclear fin, Fin o FIN.';
+            let posicion=texto.search('salir');
+
+            document.write(posicion);*/
+
+            let texto;
+
+            texto=prompt('Introduce la oración');
+            document.write(texto + '<br><br>');
+
+            let palabra=prompt('Introduce la palabra a buscar');
+            
+            //El objeto .indexOf, nos devuelve la posición de la primera letra del string, si la palabra no estuvieses, nos daría como resultado -1, por ello, ponemos que se es diferente a 1, la palabra que hayamos puesto si estará.
+            if(texto.indexOf(palabra)!=1){
+                document.write('La frase ingresada contiene la palabra: ' + palabra);
+            }else{
+                document.write('La frase ingresada no contiene la palabra: ' +  palabra);
+            }
+
+
+            
+        </script>
+
+    </body>
+</html>
