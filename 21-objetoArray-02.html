@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            function cargar(primero, segundo){                
+                for(let f=0;f<primero.length;f++){
+                    let v=prompt('Ingrese el primer vector');
+                    primero[f]=parseInt(v);//el parseInt, su parametro debe de ir entre parentesis
+                    //document.write(primero[f] + ' ');
+                }
+                 
+                for(let f=0;f<segundo.length;f++){
+                    let v=prompt('Ingrese el segundo vector');
+                    segundo[f]=parseInt(v);//el parseInt, su parametro debe de ir entre parentesis
+                    //document.write(segundo[f] + ' ');
+                }
+            }
+            //tenemos el array (primero y segundo)  que lo he entroducido en la función como parametro y como indico que son diferenten en el for, no importa que las variable sean la misma letra.
+
+            function suma(primero, segundo, sumaValores){
+                for(let f=0;f<sumaValores.length;f++){
+                    sumaValores[f]=primero[f]+segundo[f];
+                }
+            }
+            //En esta segunda función, hemos hecho la suma de los dos arrays, recuperando los datos incluidos en la función anterior
+
+            function imprimirValores(sumaValores){
+                for(let f=0;f<sumaValores.length;f++){
+                    document.write(sumaValores[f] + ' ');
+                }
+            }
+            //En esta función hemos hecho la impresión de los datos de la función anterior.
+
+            let primero=new Array(5);
+            let segundo=new Array(5);
+            let sumaValores=new Array(5);
+            cargar(primero, segundo);
+            suma(primero, segundo, sumaValores);
+            imprimirValores(sumaValores);
+            
+            
+        </script>
+
+    </body>
+</html>

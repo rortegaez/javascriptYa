@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script>
+
+            function cargarValores(valores){
+                for(let f=0;f<valores.length;f++){
+                    let v=prompt('Ingrese valores');
+                    valores[f]=parseInt(v); 
+                    //el parseInt para definirlo debe de estar entre parentesis
+                    //aquí indicamos que los valores dentro del array, con número enteros, siendo f el subindice dentro del array.
+                    //document.write(valores[f] + ' '); (lo dejo así, lo he utilizado para comprobar que la función estaba correcta. Ya que, el ejercicio no nos pedio que mostrasemos los valores introducidos)                  
+                }
+            }
+
+            function sumarValores(valores){
+                let suma=0;
+                for(let f=0;f<valores.length;f++){
+                    suma=suma+valores[f];
+                }
+
+                document.write('El valor acumulado en la suma de valores es: ' + suma + '. <br>');
+            }
+
+            function mayores(valores){
+                let sumaMayores=0;
+                for(let f=0;f<valores.length;f++){
+                    if(valores[f]>36){
+                        sumaMayores=sumaMayores+valores[f];
+                    }
+                }
+
+                document.write('El acumulado de valores mayores de 36 es: ' + sumaMayores + '.<br>');
+            }
+
+            function mayoresCinq(valores){
+                let mayor=0;
+                for(let f=0;f<valores.length;f++){
+                    if(valores[f]>50){
+                        mayor=mayor+1;;
+                    }
+                }
+
+                document.write('La cantidad de valores mayor a 50 es: ' + mayor + '.<br>');
+            }
+
+            let valores=new Array(8);
+            cargarValores(valores);
+            sumarValores(valores);
+            mayores(valores);
+            mayoresCinq(valores);
+
+            /*Debemos de poner el "document.write" dentro de la función, ya que, no nos deja luego concatenar la función y no pudemos utilizar las variables, ya que, están dentro de una función.
+            
+            document.write('La suma de los ocho valores cargados es ' + sumarValores(valores) + ', la suma de los valores mayor de 36 es ' + mayores(valores) + ' y hay ' + mayoresCinq(valores) + ' mayor de 50.')*/
+            
+
+        </script>
+
+    </body>
+</html>
