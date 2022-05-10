@@ -8,7 +8,36 @@
 
         <script>
 
-            
+            let texto=prompt('Introduce un texto');
+            document.write(texto + '<br>');
+
+            function mitad(texto){
+                let tamano=texto.length/2;
+                //con substr, le añadimos dos parametros, uno es donde comienza y el segundo la longitud del mismo.
+                let lmitad=texto.substr(0,tamano);
+
+                document.write('Estos son la mitad de los caracteres del texto: ' + lmitad + '.<br>');
+            }
+
+            function ultimocarat(texto){
+                //he sacado el tamaño con .length y le hemos restado uno, ya que, los caracteres empiezasn por 0 y no por 1
+                let posicion=texto.length;
+                let ultima=texto.charAt(posicion-1);
+
+                //Utilizo esta document, para comprobación de la función. 
+                //document.write(posicion);
+                document.write('El último caracter del texto corresponde a la letra: ' + ultima + '.<br>');
+            }
+
+            function reversa(texto){
+                let posicion=texto.length;
+                let texreverso=texto.substring(posicion,0);
+
+                document.write('Este es el texto al reves: ' + texreverso);
+            }
+
+            mitad(texto);
+            ultimocarat(texto);
             
         </script>
 
