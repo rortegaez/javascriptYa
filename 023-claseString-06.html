@@ -31,13 +31,18 @@
 
             function reversa(texto){
                 let posicion=texto.length;
-                let texreverso=texto.substring(posicion,0);
+                //let texreverso=texto.substring(posicion,0);
+                for(let f=0;f<texto.length;f++){
+                    let letra=texto.charAt(texto.length-1-f);//aquí hemos puesto como el caracte a sacar el último con una convinación para que vaya haciendo la cuenta atrás.
+                    document.write(letra);
+                }
 
-                document.write('Este es el texto al reves: ' + texreverso);
+                //document.write('Este es el texto al reves: ' + texreverso);
             }
 
             mitad(texto);
             ultimocarat(texto);
+            reversa(texto);
             
         </script>
 
