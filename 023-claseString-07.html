@@ -1,4 +1,4 @@
-v<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -8,7 +8,16 @@ v<!DOCTYPE html>
 
         <script>
 
-            
+            function separar(frase){
+                let separado=frase.split(' ');
+                //document.write(separado);
+                for(let f=0;f<separado.length;f++){
+                    document.write(separado[f] + '<br>');
+                }
+            }
+
+            let frase=prompt('Ingrese la frase');
+            separar(frase);
             
         </script>
 

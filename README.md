@@ -9,7 +9,7 @@ https://www.tutorialesprogramacionya.com/javascriptya/index.php?inicio=0 web don
     </head>
     <body>
 
-        <script>
+        <script type="text/javascript">
 
             
             

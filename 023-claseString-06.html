@@ -36,13 +36,47 @@
                     let letra=texto.charAt(texto.length-1-f);//aquí hemos puesto como el caracte a sacar el último con una convinación para que vaya haciendo la cuenta atrás.
                     document.write(letra);
                 }
+                document.write('<br>');
 
                 //document.write('Este es el texto al reves: ' + texreverso);
+            }
+
+            function espacio(texto){
+                for(let f=0;f<texto.length;f++){
+                    document.write(texto.charAt(f) + '-');
+                }
+                document.write('<br>');
+            }
+
+            function vocales(texto){
+                let cant=0;
+                for(let f=0;f<texto.length;f++){
+                    switch(texto.charAt(f)){
+                        case 'a':
+                            cant++;
+                            break;
+                        case 'e':
+                            cant++;
+                            break;
+                        case 'i':
+                            cant++;
+                            break;
+                        case 'o':
+                            cant++;
+                            break;
+                        case 'u':
+                            cant++;
+                            break;
+                    }
+                }
+                document.write('La cantidad de vocales en el texto son: ' + cant);
             }
 
             mitad(texto);
             ultimocarat(texto);
             reversa(texto);
+            espacio(texto);
+            vocales(texto);
             
         </script>
 
