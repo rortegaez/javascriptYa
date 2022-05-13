@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            function concatenar(){
+                //capturamos el dato que asignamos como value al rellenar el input
+                let nom=document.getElementById('nombre').value;
+                let ape=document.getElementById('apellido').value;
+                //con este formato, podemos asignar un texto a un id que tengamos en el html
+                document.getElementById('resultado').value=nom + ' ' + ape;
+
+                //Con esto tenemos una pantalla saliendo con la concatenación de los datos.
+                //alert(nom + ' ' + ape);
+            }
+            
+        </script>
+
+        <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido">
+            <input type="button" onclick="concatenar()" value="enviar">
+            <br><br>
+            <input type="text" id="resultado">
+        </form>
+
+    </body>
+</html>

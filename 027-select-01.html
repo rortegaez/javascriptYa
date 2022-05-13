@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            function elecpizza(){
+                //como ya tenemos el value asignado, solo debemos de "capturar" el elemento el value en el id.
+                let seleccion=document.getElementById('pizzas');
+                //al input creado (precios), le asignamos el value que le hemos dado en el select.option
+                document.getElementById('precios').value=seleccion.options[seleccion.selectedIndex].value;
+            }
+            
+            
+        </script>
+
+        <form>
+            <select id="pizzas" onchange="elecpizza()">
+                <option value="6€">Jamon y Queso</option>
+                <option value="6,50€">Muzaarela</option>
+                <option value="12€">Morrones</option>
+            </select>
+            <br><br>
+            <p>Precio:</p>
+            <input type="text" name="precios" id="precios">
+        </form>
+
+    </body>
+</html>

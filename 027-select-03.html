@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            function calcular(){
+                let selecPizza=parseInt(document.getElementById('pizzas').value);//en este ejercicio hemos podido capturar el value.
+                let selecCantidad=document.getElementById('cantidad').value;
+                let suma=selecPizza*selecCantidad;
+                document.getElementById('precio').value=suma + '€';
+            }          
+        </script>
+
+        <form>
+            <select id="pizzas">
+                <option value="4">Queso</option>
+                <option value="6">Jamón y Queso</option>
+                <option value="10">Especial</option>
+            </select>
+        </form>
+        <br><br>
+        <input type="number" name="cantidad" id="cantidad">
+        <label for="cantidad">Unidades</label>
+        <br>
+        <input type="button" id="calcular" value='calcular' onclick="calcular()">
+        <br>
+        <input type="text" id="precio" name="precio">
+
+    </body>
+</html>

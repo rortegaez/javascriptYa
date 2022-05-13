@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            function finalizado(){
+                let cantcorrecta=0;
+                let resultado1=document.getElementById('preguntauna');
+                let resultado2=document.getElementById('preguntados');
+                let resultado3=document.getElementById('preguntatres');
+                let resultado4=document.getElementById('preguntacuatro');
+                //se ha utilizado este formato, ya que, con el .value, no capturarba el dato para poder hacer el if.
+                if(resultado1.options[resultado1.selectedIndex].value==1){
+                    cantcorrecta++;
+                }
+                if(resultado2.options[resultado2.selectedIndex].value==1){
+                    cantcorrecta++;
+                }
+                if(resultado3.options[resultado3.selectedIndex].value==1){
+                    cantcorrecta++;
+                }
+                if(resultado4.options[resultado4.selectedIndex].value==1){
+                    cantcorrecta++;
+                }
+                //alert(cantcorrecta);
+                document.getElementById('resultado').value=cantcorrecta;
+            }
+        </script>
+        <form>
+            <label for="preguntauna">¿De qué color es el caballo blando de Santiago?</label>
+            <select name="preguntauna" id="preguntauna">
+                <option value='1'>Blanco</option>
+                <option value='0'>Rojo</option>
+                <option value='0'>Amarillo</option>
+                <option value='0'>Naranja</option>
+            </select>
+            <br><br>
+
+            <label for="preguntados">¿Cuantas provincias tiene Andalucía?</label>
+            <select name="preguntados" id="preguntados">
+                <option value='0'>7</option>
+                <option value='0'>10</option>
+                <option value='1'>8</option>
+                <option value='0'>9</option>
+            </select>
+            <br><br>
+
+            <label for="preguntauna">¿Cuantas Chamions Legue tiene el Real Madrid?</label>
+            <select name="preguntauna" id="preguntatres">
+                <option value='0'>14</option>
+                <option value='0'>12</option>
+                <option value='0'>15</option>
+                <option value='1'>13</option>
+            </select>
+            <br><br>
+
+            <label for="preguntauna">¿Contra qué peleaba Don Quijote?</label>
+            <select name="preguntauna" id="preguntacuatro">
+                <option value='0'>Dragones</option>
+                <option value='0'>Dunas</option>
+                <option value='1'>Molinos</option>
+                <option value='0'>Iglesias</option>
+            </select>
+        </form>
+
+        <br><br>
+        <input type="button" id="calcular" value="terminado" onclick="finalizado()">
+
+        <br><br>
+        <input type="text" name="resultado" id="resultado">
+        <label for="resultado">Han sido las preguntas acertadas.</label>
+
+    </body>
+</html>

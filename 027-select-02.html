@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            function selProcesador(){
+                //hemos creado la variable "selecProcesador" y es la que debemos de utilizar luego para añadir los datos 
+                let selecProcesador=document.getElementById('procesador');//con esta opción capturamos el index del index.
+                document.getElementById('preProcesador').value=selecProcesador.options[selecProcesador.selectedIndex].value;//con .option[.selectedIndex] elegimos el value o text del index que se haya elegido en el select del form.
+                document.getElementById('texProcesador').value=selecProcesador.options[selecProcesador.selectedIndex].text;
+            }
+
+            function selMonitor(){
+                let selecMonitor=document.getElementById('monitor');
+                document.getElementById('preMonitor').value=selecMonitor.options[selecMonitor.selectedIndex].value;
+                document.getElementById('texMonitor').value=selecMonitor.options[selecMonitor.selectedIndex].text;
+            }
+
+            function selDiscoDuro(){
+                let selecDiscoDuro=document.getElementById('discoDuro');
+                document.getElementById('preDiscoDuro').value=selecDiscoDuro.options[selecDiscoDuro.selectedIndex].value;
+                document.getElementById('texDiscoDuro').value=selecDiscoDuro.options[selecDiscoDuro.selectedIndex].text;
+            }
+
+            function calcular(){
+                let preProcesador=parseInt(document.getElementById('procesador').value);
+                let preMonitor=parseInt(document.getElementById('monitor').value);
+                let preDiscoDuro=parseInt(document.getElementById('discoDuro').value);
+                //alert(preProcesador);
+
+                let suma=preProcesador+preMonitor+preDiscoDuro;
+                //alert(suma);
+                document.getElementById('preFinal').value=suma + '€';
+            }
+
+            
+            
+        </script>
+
+        <for>
+            <select id="procesador" onchange="selProcesador()">
+                <option value="400€">Intel I3</option>
+                <option value="600€">Intel I5</option>
+                <option value="550€">Intel I7</option>
+            </select>
+            <br><br>
+            <select id="monitor" onchange="selMonitor()">
+                <option value="250€">Samsung 20'</option>
+                <option value="350€">Samsung 22'</option>
+                <option value="550€">Samsung 26'</option>
+            </select>
+            <br><br>
+            <select id="discoDuro" onchange="selDiscoDuro()">
+                <option value="300€">500Gb</option>
+                <option value="440€">1Tb</option>
+                <option value="500€">3Tb</option>
+            </select>
+        </for>        
+        <br><br>
+
+        <input type="text" name="resultado" id="preProcesador">
+        <input type="text" name="resultado" id="texProcesador">
+        <br>
+        <input type="text" name="resultado" id="preMonitor">
+        <input type="text" name="resultado" id="texMonitor">
+        <br>
+        <input type="text" name="resutlado" id="preDiscoDuro">
+        <input type="text" name="resutlado" id="texDiscoDuro">
+        <br><br>
+
+        <input type="button" value="calcular" onclick="calcular()">
+        <br><br>
+        <input type="text" name="resultado" id="preFinal">
+
+    </body>
+</html>

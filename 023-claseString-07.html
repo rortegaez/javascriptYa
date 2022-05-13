@@ -7,8 +7,9 @@
     <body>
 
         <script>
-
+// el objeto split me devuelvo un vector separando el string por donde le hayamos indicado(' ')es el espacio, y si ponemos('') nos separaria por caracteres. Y después hemos realizado un bucle for para hacer la impresión por pantalla una encima de la otra.
             function separar(frase){
+                //separado parece una variable normal, pero es un vector, ya que, .split devuelve un vector, por ello, después hay que tratar separado como vector.
                 let separado=frase.split(' ');
                 //document.write(separado);
                 for(let f=0;f<separado.length;f++){

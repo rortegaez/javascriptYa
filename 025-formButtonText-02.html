@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            function resolver(){
+                let n1=document.getElementById('num1').value;
+                let n2=document.getElementById('num2').value;
+                //alert(n1 + ' ' + n2); utilizado para comprobar que la captura de datos era correcta
+                if(n1==0 || n2==0){
+                    alert('Algunos de los dos números no es correcto');
+                }else{
+                    if(n1>n2){
+                        alert('El número ' + n1 + ' es mayor que ' + n2 + '.');
+                    }else{
+                        alert('El número ' + n2 + ' es mayor que ' + n1+ '.');
+                    }
+                }
+            }
+            //Los datos se capturan para la función, cuando damos al boton y por ello, debemos de indicar en el onclick, que ponga en marcha la función.
+            
+        </script>
+
+        <form>
+            <label for="valores1">Introduce primer número:</label>
+            <input type="number" name="valores1" id="num1">
+            <label for="valores2">Introduce segundo número:</label>
+            <input type="number" name="valores2" id="num2">
+            <input type="button" value="confirmar" onclick="resolver()">
+        </form>
+    </body>
+</html>
