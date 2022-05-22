@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+         do{
+             for(let f=0;f<10000;f++){
+                let num=0;
+                let paso1=num*3;
+                let paso2=paso1+3;
+                let resultado=paso2*3;
+                let resulstg=resultado.toString();
+                let separar=resulstg.split('').map(Number);
+                let final=separar.reduce((acc,item)=>{
+                        return acc=acc+item;
+                    });
+                document.write(final + ' ');
+                num++;
+                if(final!=9){
+                    alert(final);
+                }
+             }
+         }while(final!=9);
+            
+            
+        </script>
+
+    </body>
+</html>

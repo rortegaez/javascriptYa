@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            function pantallaNueva(){
+                //los textos dentro de open, van entre comillas porque son string, mientras que screen.availHeight debe de ir fuera por que son datos.
+                let ventana1=open('','','width='+ screen.availWidth +',height='+ screen.availHeight/2);
+            }
+        </script>
+
+        <input type="button" value="ok" onclick="pantallaNueva()";>
+
+    </body>
+</html>

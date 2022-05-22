@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            //con la función vaciar, dejamos el input vacio al posicionar el cursor
+            function vaciar(control){
+                control.value='';
+            }
+            //con la función verificar estamos comprobando los datos que estamos introduciendo en el input
+            function verificar(control){
+                if(control.value.length<7 || control.value.length>20){
+                    alert('contraseña incorrecta');
+                }
+            }
+        </script>
+
+        <form>
+            <input type="text" id="nombre" onfocus="vaciar(this)" onblur="verificar(this)" value="nombre">
+            <br>
+            <input type="text" id="clave" onfocus="vaciar(this)" onblur="verificar(this)" value="clave">
+            <br>
+            <input type="button" value="confirmar">
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            let num=parseInt(prompt('Introduce numero'));
+
+            //for(let f=0;f<1000;f++){
+                if(num<1000){
+                    let paso1=num*3;
+                    let paso2=paso1+3;
+                    let resultado=paso2*3;
+                    /*
+                    con .toString() hemos pasado el resultado a un string para después separar los diferentes carácteres.
+                    Con .split hemos separado los caracteres y los hemos asignado a una variable como un array
+                    y con el .map(Numbers) hemos hecho que esos números pasen como números enteros, en vez, de como string
+                    */
+                    let resulstg=resultado.toString();
+                    let separar=resulstg.split('').map(Number);
+                    
+                    /*
+                    document.write(separar[0] + '<br>');
+                    document.write(separar[1] + '<br>');
+                    
+                    let suma2=separar[0]+separar[1]; //Se ha utilizado para comprobar que salían correctamente los datos.
+                    document.write(suma2);
+                    */
+                   
+                    /*.reduce es un metodo para reducir un array a un solo número, por ello, debe de tener una variable donde almacenar ese número.
+                    En este punto acc, es el acumulador donde se van guardando las sumas e item, son los distintos index de la array.
+                    Tras el item podriamos haber peusto una variable más numérica, qeu sería donde empieza a capturar los datos en la array.
+                    El return, es el que devuelvo el resultado al acumulador.
+                    */
+                    let final=separar.reduce((acc,item)=>{
+                        return acc=acc+item;
+                    });
+                    //let resulfinal=resultado.charAt(0)+resultado.charAt(1);
+                    alert(final);
+                }
+            //}
+
+            
+            
+        </script>
+
+    </body>
+</html>

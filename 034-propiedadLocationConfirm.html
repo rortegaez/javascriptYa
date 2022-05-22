@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            function otraWeb(){
+            var num;
+            num=Math.random()*3; //se guarda en num un valor comprendido entre 0.00001 y 2.99999
+            num=parseInt(num);  //guardamos solo la parte entera de la variable num
+            if (num==0){
+                window.location='http://www.hotmail.com';
+            }else{
+                if(num==1){
+                    window.location='http://www.gmail.com';
+                }else{
+                    window.location='http://www.yahoo.com';
+                }
+            }
+        }
+        </script>
+
+        <a href="javascript:otraWeb()">Correos aleatorios</a>
+
+    </body>
+</html>

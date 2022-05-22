@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 41</title>
+    </head>
+    <body>
+        <script>
+            class Persona{
+                constructor(nombre,edad){
+                    this.nombre=window.prompt('Ingrese nombre de la persona');
+                    //usar mejor el parseFloat, ya que, el parseInt puede dar error
+                    this.edad=parseFloat(prompt('Ingresea edad: '));
+                }
+            }
+
+            class Empresa{
+                constructor(edadTope){
+                    this.edadTope=60;
+                    this.noPuedeEntrar=function(per){
+                        if(per.edad >= this.edadTope)
+                        return true;
+                        else
+                        return false;
+                    }
+                }
+            }
+
+            const per1=new Persona();
+            const per2=new Persona();
+            const per3=new Persona();
+            const empresa=new Empresa();
+            let cant=0;
+            if(empresa.noPuedeEntrar(per1))
+                cant++;
+            if(empresa.noPuedeEntrar(per2))
+                cant++;
+            if(empresa.noPuedeEntrar(per3))
+                cant++;
+            
+            document.write('La cantidad de personas que no pueden entrar por su edad a la empresa son: ' + cant);
+        </script>
+    </body>
+</html>

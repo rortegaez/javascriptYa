@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo de Javascript 15-01</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            function verificar(){
+                let nombre=document.getElementById('nombre').value;
+                let mail=document.getElementById('mail').value;
+                let comentarios=document.getElementById('comentarios').value;
+                alert(nombre + '\n' + mail + '\n'+ comentarios);
+            }
+        </script>
+
+        <form>
+            <form>
+                <label for="nombre">Ingrese nombre:</label>
+                <input type="text" id="nombre">
+                <br>
+                <label for="mail">Ingrese email:</label>
+                <input type="text" id="mail">
+                <br>
+                <label for="comentarios">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios" rows="20" cols="100"></textarea>
+                <br>
+                <input type="button" value="confirmar" onclick="verificar()">
+            </form>
+        </form>
+
+    </body>
+</html>
