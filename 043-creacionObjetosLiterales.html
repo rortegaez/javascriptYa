@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 42. Creación de objetos literales</title>
+    </head>
+    <body>
+        <script>
+            let jugador1={
+                nombre: 'Ulises',
+                puntos: 200,
+
+                imprimir: function(){
+                    document.write('El jugador ' + this.nombre + ' tiene ' + this.puntos + ' puntos. <br>');
+                },
+                aumentarPuntos: function(monto){
+                    this.puntos=this.puntos+monto;
+                },
+                verificarSiGano: function(){
+                    if(this.puntos>=1000){
+                        alert('Has ganado la partida, con ' + this.puntos + ' puntos.');
+                    }
+                }
+
+            };
+            //Esta parte comentada es como nos lo pedía el ejercicio.
+            /*jugador1.imprimir();
+            jugador1.aumentarPuntos(500);
+            jugador1.verificarSiGano();
+            jugador1.imprimir();
+            jugador1.aumentarPuntos(500);
+            jugador1.verificarSiGano();
+            jugador1.imprimir();*/
+
+            //Esta parte es como yo he pensado que debería de hacerse, para que que quedara merjor, además de probar window.prompt para introducir parametros.
+            jugador1.imprimir();
+            do{
+                jugador1.aumentarPuntos(parseFloat(window.prompt('Ingrese puntos ganados')));
+                jugador1.verificarSiGano();
+            }while(jugador1.puntos<1000);
+
+            document.write('Has ganado con ' + jugador1.puntos + ' puntos.');
+            
+
+
+        </script>
+    </body>
+</html>

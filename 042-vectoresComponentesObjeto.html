@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 42: Vectores con componentes de tipo objeto</title>
+    </head>
+    <body>
+        <script>
+            class Persona{
+                constructor(nombre,edad){
+                    this.nombre=nombre;
+                    this.edad=parseFloat(edad);
+                }
+
+                imprimirNombre(){
+                    document.write(this.nombre + ' que tiene una edad ' + this.edad + '<br>');
+                }
+            }
+
+            let vector=new Array(4);
+            vector[0]=new Persona('Juan', 15);
+            vector[1]=new Persona('Paqui', 28);
+            vector[2]=new Persona('Pedro', 16);
+            vector[3]=new Persona('Mari', 17);
+
+            let mayorEdad=0;
+
+            for(let f=0;f<vector.length;f++){
+                if(vector[f].edad>vector[mayorEdad].edad){
+                    mayorEdad=f;
+                }
+            }
+            document.write('Personas con mayor edad:<br>');
+            for(var f=0;f<vector.length;f++){
+                if(vector[f].edad==vector[mayorEdad].edad){
+                    vector[f].imprimirNombre();
+                }
+            }
+        </script>
+    </body>
+</html>
