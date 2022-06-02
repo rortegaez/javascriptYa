@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 55. Método To String</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            let vec=new Array(10);
+
+            for(let f=0;f<vec.length;f++){
+                vec[f]=window.prompt('Introduce un valor');
+            }
+
+            let cadena1=vec.toString();
+            let cadena2=vec.join();
+
+            if(cadena1==cadena2){
+                document.write('Son iguales');
+            }else{
+                document.write('No son iguales');
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 44. Array: Diferentes formas de crearlos</title>
+    </head>
+    <body>
+        <script>
+            /*diferentes formar de crear un array:
+            let vector1=new Array();
+            let vector2=[];
+            let vector3=new Array(5);
+            let vector4=new Array(1.70,'juan');
+            let vector5=[1.70, 'juan'];*/
+            //los array se declaran con parentesis, excepto en el caso que no ponemos new array, que entonces va con corchetes.
+            let dias=new Array('lunes','martes','miercoles','jueves','viernes','sabado','domingo');
+            let meses=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
+
+            for(let f=0;f<dias.length;f++){
+                document.write(dias[f] + '<br>');
+            }
+
+            for(let m=0;m<meses.length;m++){
+                document.write(meses[m] + '<br>')
+            }
+        </script>
+    </body>
+</html>

@@ -6,11 +6,12 @@
     <body>
         <script>
             class Persona{
+                //No es necesario poner imprimirNombre como atributo
                 constructor(nombre,edad){
                     this.nombre=nombre;
                     this.edad=parseFloat(edad);
                 }
-
+                //Que este el metodo, no quiere decir que se vaya a utilizar obligatoriamente.
                 imprimirNombre(){
                     document.write(this.nombre + ' que tiene una edad ' + this.edad + '<br>');
                 }
@@ -21,14 +22,16 @@
             vector[1]=new Persona('Paqui', 28);
             vector[2]=new Persona('Pedro', 16);
             vector[3]=new Persona('Mari', 17);
-
+            //em esta variable se va almacenando el vector con mayor edad
             let mayorEdad=0;
-
+            //con este bucle estamos comprobando la edad de casa vector, almacenandose en la variable mayorEdad. Al decir que mayorEdad=0, en el primer pase vector[0].edad=15, se queda almacenado el indice del vector en mayorEdad. En el segundo pase, comprueba vector[1].edad y si es mayor se almacena en mayorEdad.
             for(let f=0;f<vector.length;f++){
                 if(vector[f].edad>vector[mayorEdad].edad){
                     mayorEdad=f;
                 }
             }
+
+            //Aquí ponemos la cadena para saber quien es la persona con mayor edad y comprobamos de nuevo todos los vectores con el bucle for. Y como el indice de mayor edad esta guarado en mayorEdad, cuando este es igual al vector[f].edad, entonces salta el metodo imprimirNombre.
             document.write('Personas con mayor edad:<br>');
             for(var f=0;f<vector.length;f++){
                 if(vector[f].edad==vector[mayorEdad].edad){

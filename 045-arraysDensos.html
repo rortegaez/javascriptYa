@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 45. Arrays densos</title>
+    </head>
+    <body>
+        <script>
+            let aleatorio=new Array(10);
+            for(let f=0;f<aleatorio.length;f++){
+                aleatorio[f]=Math.round((Math.random()*500));
+                document.write(aleatorio[f] + ' '); //usado para comprobar que funcionaba.
+            }
+            document.write('<br>');
+
+            let indicemy=0;
+            let indicemn=0;
+
+            let vecMayores=[];
+            for(let f=0;f<aleatorio.length;f++){
+                if(aleatorio[f]>=250){
+                    vecMayores[indicemy]=aleatorio[f];
+                    indicemy++;
+                }
+            }
+            let vecMenores=new Array();
+            for(let f=0;f<aleatorio.length;f++){
+                if(aleatorio[f]<250){
+                    vecMenores[indicemn]=aleatorio[f];
+                    indicemn++;
+                }
+            }
+
+            for(let f=0;f<vecMayores.length;f++){
+                document.write(vecMayores[f] + ' ');
+            }
+            document.write('<br>');
+            for(let m=0;m<vecMenores.length;m++){
+                document.write(vecMenores[m] + ' ');
+            }
+            document.write('<br>');
+            document.write('El tamaño del vector de cifras mayores de 250 son: ' + vecMayores.length + '<br>');
+            document.write('El tamaño del vector de cifras menores de 250 son: ' + vecMenores.length + '<br>');
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 51. array método Splice</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*metodo splice vec.splice(a,b); el primer parametro dice donde empieza y el segundo cuanto indice borra.
+            vec.splice(a,b,c); si b=0 primer parametro donde empieza, el segundo dice que no borra nada y a partir del tercero son los nuevos parametros que incluimos en el array. Si b!=0 eliminamos los indices indicado e insertamos a partir del tercer parametro
+            */
+           var vec=[0,7,2,3,4,2,6,8,2,2];
+           var indice=0;
+
+            do{
+                if(vec[indice]==2){
+                    vec.splice(indice,1,1,1);
+                }
+                indice++;
+            }while(indice<vec.length);
+
+            for(let f=0;f<vec.length;f++){
+                document.write(vec[f] + ' ');
+            }
+        </script>
+    </body>
+</html>

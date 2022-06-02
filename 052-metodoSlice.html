@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 52. Método Slice</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            let vec=new Array(10);
+
+            for(let f=0;f<vec.length;f++){
+                vec[f]=parseInt(Math.round(Math.random()*1000));
+                document.write(vec[f] + ' ');
+            }
+            document.write('<br>');
+//--------------------------------------------------------------------
+            /*let menor=vec[0];
+            let pos=0;
+
+            
+                }
+            }*/
+            let menor=vec[0];
+            let pos=0;
+
+            for(f=1;f<vec.length;f++){
+                if(vec[f]<menor){
+                    menor=vec[f];
+                    pos=f;
+                }
+            }    
+            /*do{
+                menor=vec[indice];
+                if(vec[indice]<menor){
+                    menor=vec[indice];
+                    pos=indice;
+                }
+                indice++;
+            }while(indice<10);*/
+            
+            
+            document.write('Elemento menor del vector: ' + menor);
+            document.write('<br>');
+            let vec2=vec.slice(pos);
+            document.write('Vector resultante de la llamada slice<br>');
+            for(let f=0;f<vec2.length;f++){
+                document.write(vec2[f] + ' ');
+            }
+            
+        </script>
+    </body>
+</html>

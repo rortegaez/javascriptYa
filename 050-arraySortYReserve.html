@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 50. Array método sort y reverse</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            let sueldos=[];
+            let valor;
+
+            do{
+                valor=parseInt(prompt('Ingrese el sueldo (cero para finalizar)',''));
+                if(valor!=0)
+                sueldos.push(valor);
+            }while(valor!=0); 
+
+            sueldos.sort(function(v1,v2){
+                if(v1>v2){
+                    return 1;
+                }else{
+                    return 0;
+                }
+            });
+
+            document.write('Sueldos ordenados de menor a mayor <br>');
+            for(let m=0;m<sueldos.length;m++){
+                document.write(sueldos[m] + '<br>');
+            }
+
+            sueldos.reverse();
+            document.write('Sueldos ordenador de mayor a menor <br>');
+            for(let f=0;f<sueldos.length;f++){
+                document.write(sueldos[f] + '<br>');
+            }
+        </script>
+    </body>
+</html>

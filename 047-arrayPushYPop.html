@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 47. Array metodo Push and Pop</title>
+    </head>
+    <body>
+        <script text="text/javascript">
+
+            let numeros=new Array(5);
+
+            for(let f=0;f<numeros.length;f++){
+                numeros[f]=parseInt(Math.round(Math.random()*1000));
+                document.write(numeros[f] + '<br>')
+            }
+
+            let ultnumero=numeros.pop();
+            let antultnumero=numeros.pop();
+            let suma=ultnumero+antultnumero;
+
+            document.write('La suma de ' + ultnumero + ' y ' + antultnumero + ' es igual a ' + suma + ' y el tamaño del vector es ' + numeros.length + '.<br>');
+            
+        </script>
+    </body>
+</html>
