@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 70. Función isNaN & isFinite</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            let num1=parseFloat(prompt('Introduce el primer valor'));
+            let num2=parseFloat(prompt('Introduce el segundo valor'));
+            
+            if(isNaN(num1) || isNaN(num2)){
+                document.write('Al menos uno de los valores ingresados no es numérico');   
+            }else{
+                producto=num1*num2;
+                if(isFinite(producto)){
+                    document.write('El producto de los dos valores es: ' + producto);
+                }else{
+                    document.write('El resultado de multiplicar dichos valores es infinito');
+                }
+            }
+            
+        </script>
+    </body>
+</html>

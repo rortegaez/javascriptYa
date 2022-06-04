@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 68. Método Change</title>
+        <script type="text/javascript">
+            addEventListener('load', inicio, false);
+//hemos cambiado "chanche" la condición y hemos hecho que aparezca como útil el botón del formulario
+            function inicio(){
+                document.getElementById('condiciones').addEventListener('change', seleccion, false);
+            }
+
+            function seleccion(){
+                if(document.getElementById('condiciones').checked==true){
+                    document.getElementById('boton').disabled=false;
+                }else{
+                    document.getElementById('boton').disabled=true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <label for="condiciones">Debes de aceptar las condiciones del contrato</label>
+        <input type="checkbox" name="condiciones" id="condiciones">
+        <br>
+        <input type="button" id="boton" name="boton" value="confirmar" disabled>
+    </body>
+</html>

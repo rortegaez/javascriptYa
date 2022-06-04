@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 57. Funciones: objeto arguments</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+//hemos creado la función, donde hemos creado una variable donde guardar, el argumento mayor. y con la opción return, hemos devuelto el número que nos ha salido a la variable may.
+            function mayor(){
+                let may=arguments[0];
+                for(let f=1;f<arguments.length;f++){
+                    if(arguments[f]>may){
+                        may=arguments[f];
+                    }
+                }
+                return may;
+            }
+
+            document.write(mayor(3,566,342,6,2234,67));
+        </script>
+    </body>
+</html>
+

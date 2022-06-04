@@ -9,12 +9,14 @@
             let sueldos=[];
             let valor;
 
+            //Se añaden los valores al array con el método push, mientras es diferente a 0.
             do{
                 valor=parseInt(prompt('Ingrese el sueldo (cero para finalizar)',''));
                 if(valor!=0)
                 sueldos.push(valor);
             }while(valor!=0); 
 
+            //dentro de los palarametro del metodo sort, añadimos la función que vemos, ya que, es método esta para string y con esto podemos utilizarlo para ordenador números.
             sueldos.sort(function(v1,v2){
                 if(v1>v2){
                     return 1;
@@ -23,11 +25,13 @@
                 }
             });
 
+            //Una vez aplicado la función, hacemos el document.write para ver el listado de números.
             document.write('Sueldos ordenados de menor a mayor <br>');
             for(let m=0;m<sueldos.length;m++){
                 document.write(sueldos[m] + '<br>');
             }
 
+            //aplicamos la función reserve y sacamos la lista en el orden contrario.
             sueldos.reverse();
             document.write('Sueldos ordenador de mayor a menor <br>');
             for(let f=0;f<sueldos.length;f++){

@@ -25,19 +25,20 @@
             let f;
             let cant=0;
 
+            /*en la variable premio, inclimos la casilla donde va a estar cado uno de lo premios. Esa casilla la ponemos en el array premio, y es igual, a la cantidad de premio, más cant +1 y la cantidad en cada vuelta se le suma uno.
+            Mientras todo eso se ejecutará, mientras la cant no llegue a 11, lo cual cual se pdroducirá hasta el diez.*/
             do{
                 let premio=parseInt(Math.random()*1000);
                 carton[premio]=1000*(cant+1);
                 cant++;
             }while(cant!=11);
 
+            /*hacemos el bucle for para analizar toda la array, en el if, debemos poner el no igual a undefined, apra rescatar solo los no undefined, y entonces el bucle if, debe de imprimer solo las cadenas que no son undefined*/
             for(f=0;f<carton.length;f++){
                 if(carton!==undefined){
                     document.write('Carton ' + f + ' tiene un premio de ' + carton[f] + '<br>');
                 }
             }
-
-            document.write(carton[25]);
         </script>
     </body>
 </html>

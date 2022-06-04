@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 64. Evento MouseDown y MouseUp</title>
+        <script type="text/javascript">
+            //mousedown cuando se pulsa el botón del ratón sobre un elemento, mouseup, cuando después de pulsar el momento de levantar el botón.
+            addEventListener('load',inicio,false);
+
+            function inicio(){
+                document.getElementById('cuadro1').addEventListener('mousedown',presion1,false);
+                document.getElementById('cuadro2').addEventListener('mouseup',presion2,false);
+            }
+
+            function presion1(){
+                document.getElementById('cuadro1').style.background='#ffff00';
+            }
+
+            function presion2(){
+                document.getElementById('cuadro2').style.background='#ff0000';
+            }
+        </script>
+    </head>
+    <body>
+        <div style="width:200px;height:200px;background:#f14a08" id="cuadro1">
+            <p></p>
+        </div>
+
+        <div style="width:200px;height:200px;background:#ffff00" id="cuadro2">
+            <p></p>
+        </div>
+    </body>
+</html>

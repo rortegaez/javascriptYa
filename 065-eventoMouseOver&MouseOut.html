@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 65. Eventos MouseOver y MouseOut</title>
+        <script type="text/javascript">
+            addEventListener('load', iniciar, false);
+
+            function iniciar(){
+                document.getElementById('titulo').addEventListener('mouseover', sobre, false);
+                document.getElementById('titulo').addEventListener('mouseout', salir, false);
+            }
+
+            function sobre(){
+                document.getElementById('titulo').style.color='#ff0000';
+                document.getElementById('titulo').style.backgroundColor='#ffff00';
+            }
+            function salir(){
+                document.getElementById('titulo').style.color='#000000';
+                document.getElementById('titulo').style.backgroundColor='#ffffff';
+            }
+
+
+        </script>
+        <style>
+            body {
+                background: #ffffff;
+            }
+            h1 {
+                color: #000000;
+            }
+        </style>
+    </head>
+    <boyd>
+        <h1 id="titulo">El día va a ser muy largo</h1>
+    </boyd>
+</html>
