@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 75. Funciones setInterval, clearInterval, setTimeout y clearTimeout</title>
+        <script type="text/javascript">
+            
+            /*Tenemos que tener en cuenta que clearInterval y clearTimeout sirven para cancelar las funciones donde incluyamos setInterval y setTimeout.
+            Mientras que la función setInterval, se repetira cada intervalo indicado.
+            Mientras que la función setTimeout solo se ejecuta una vez, según intervalo indicado.*/
+
+            window.addEventListener('load',inicio,false);
+
+            function inicio(){
+                cambio=setInterval(function(){window.location='http://www.as.com';},5000);
+            }
+            //El formato de añadir a la función inicio, la función redi es más básico. Mientras que la opción de añadir la propia frunción como parámetro, nos ocupa menos líneas de programación.
+            /*function redi(){
+                window.location='http://www.as.com';
+            }*/
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

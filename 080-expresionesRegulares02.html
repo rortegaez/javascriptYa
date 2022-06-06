@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 80. Expresiones regulares: cuantificador o repeticiones {x} {x,y} {x,}</title>
+        <script type="text/javascript">
+            let coordenadas=prompt('Ingresar coordenadas');
+            //no esta bien expersado, pero debemos de tener en cuenta que para poner la cantidad de digitos entre {} hay que poner la ,
+            let patron=/\([0-9]{1,3}\,[0-9]{1,3}\)/; ///\([0-9]{1,3}\,[0-9]{1,3}\)/;
+
+            if(patron.test(coordenadas)){
+                alert('perfecto')
+            }else{
+                alert('Estas jodido');
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
