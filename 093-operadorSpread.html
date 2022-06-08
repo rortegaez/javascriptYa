@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 93. Operador Spread</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            //el operador Spread sirve para descomponer un array en elementos individulaes.
+            /*Creamos el vector con los elementos que creamos oportunos.
+            Creamos otra variable que es donde vamos a almacenar el mayor de todos los número, gracias al método .max de Math. Pero como parámetro pasamos el spread (...vec), y nos va a devolver la cifra para mostrar del vector.
+            Por último hacemos el document.write para que aparezca por ventana.
+            */
+            const vec=[10,60,2,500,50,18];
+            const mayor=Math.max(...vec);
+            document.write(`El mayor de ${vec.toString()} es ${mayor}`);
+
+            document.write('<br><br>');
+
+            /*
+            creamos la función y le indicamos que es lo que debe de hacer.
+            Luego creamos el vector con los elementos que deseamos vec.
+            Creamos otra constante donde almacenamos la función sumar y le damos como parámetro el sprec de vec, con lo que estamos separando los elemento de vec, como si fueran elemento individuales, que entonces si puede procesar la función.
+            Finalmente incluimos el document.write, para verlo por pantalla.
+            */
+
+            function sumar(x,y,z){
+                return x+y+z;
+            }
+            const vec1=[10,20,30];
+            const s=sumar(...vec1);
+            document.write(s);
+
+        </script>
+    </body>
+</html>

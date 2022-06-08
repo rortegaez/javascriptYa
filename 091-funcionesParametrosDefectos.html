@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 91. ES6 Funciones con parámetros por defecto</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            //hemos creado una función la cual, nos dice la tabla de multiplicar, por la cantidad de multiplos que queramos. Pero al asiganarle valores a los parámetros, conseguimos que si no ponemos alguno de ellos, la función los tiene asignador por defecto.
+            function multiplicar(tabla=2,cantidad=10){
+                document.write(`Tabla del ${tabla}<br>`);
+                for(let x=1;x<=cantidad;x++){
+                    v=x*tabla;
+                    document.write(`${tabla}*${x}=${v}<br>`);
+                }
+            }
+
+            multiplicar();
+            multiplicar(3);
+            multiplicar(5,20);
+        </script>
+    </body>
+</html>

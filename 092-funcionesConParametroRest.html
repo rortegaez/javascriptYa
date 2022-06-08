@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 92. ES6 Funciones con parámetros Rest</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            //window.addEventListener('load',vectorEnteros,false);
+
+            
+
+            function ordenar(...lista){
+                return lista.sort(
+                    function(x,y){
+                        if(x>y)
+                            return 1;
+                        else
+                            return -1;
+                    }
+                )
+            }
+
+            let eleordenados=ordenar(25,15,2,65,2569);
+            document.write(eleordenados.toString());
+        
+        </script>
+    </body>
+</html>
