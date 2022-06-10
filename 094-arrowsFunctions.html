@@ -6,7 +6,17 @@
     </head>
     <body>
         <script type="text/javascript">
-            
+            /*
+            En este segundo ejemplo, hemos tenido que ingresar en número para hacer el intervalo hasta el número deseado.
+            */
+            let y=parseInt(prompt('Intruduzca un número entero'));
+            entero1=y=>Math.trunc(Math.random()*y)+1;
+            document.write(entero1(y) + '<br>');
+            /*
+            El ejercicio esta resuelto tal como dice la werb.Lo único que en la web lo hace con Math.trunc() que lo que hace es cortar los decimales, a diferencia de round que redondea.
+            */
+            let entero=x=>Math.trunc(Math.random()*x)+1;
+            document.write(entero(23));
         </script>
     </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 96. Declaración de Clases 01</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            //En este ejercicio, se pedia que se pusiera en el constructor los datos del mismo, mientras que he creado el método para ingresar los datos.
+            class persona{
+                constructor(){
+                    this.nombre= '';
+                    this.edad= 0;
+                }
+                insertarDatos(nombre,edad){
+                    this.nombre=nombre;
+                    this.edad=edad;
+                }
+                imprimir(){
+                    document.write(`El ciudadano se llama ${this.nombre} y tiene una edad de ${this.edad}`);
+                }
+                comprobarEdad(){
+                    if(this.edad>18){
+                        alert('Ya puedes sacarte el carnet de conducir');
+                    }else{
+                        alert('Acuerdate, todavía no puedes beber alcohol');
+                    }
+                }
+            }
+
+            let persona1=new persona();
+            persona1.insertarDatos('Josefina', 15);
+            persona1.imprimir();
+            persona1.comprobarEdad();
+
+            document.write('<br>');
+
+            let persona2=new persona();
+            persona2.insertarDatos('Paco', 24);
+            persona2.imprimir();
+            persona2.comprobarEdad();
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 97. Herencias</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            class Calculadora{
+                constructor(valor1,valor2){
+                    this.valor1=valor1;
+                    this.valor2=valor2;
+                    this.resultado=null;
+                }
+                sumar(){
+                    this.resultado=this.valor1+this.valor2;
+                    document.write(`La suma de ${this.valor1} y ${this.valor2} es `);
+                    this.imprimir();
+                }
+                restar(){
+                    this.resultado=this.valor1-this.valor2;
+                    document.write(`La resta de ${this.valor1} y ${this.valor2} es `);
+                    this.imprimir();
+                }
+                multiplicar(){
+                    this.resultado=this.valor1*this.valor2;
+                    document.write(`La multiplicación de ${this.valor1} y ${this.valor2} es `);
+                    this.imprimir();
+                }
+                dividir(){
+                    this.resultado=this.valor1/this.valor2;
+                    document.write(`La división de ${this.valor1} y ${this.valor2} es `);
+                    this.imprimir();
+                }
+                imprimir(){
+                    document.write(this.resultado + '<br>');
+                }
+            }
+
+            class CalculadoraCientifica extends Calculadora{
+                cuadrado(){
+                    this.resultado=this.valor1*this.valor1;
+                    document.write(`${this.valor1} elevado al cuadrado es `);
+                    this.imprimir();
+                }
+                raizCuadrada(){
+                    this.resultado=Math.sqrt(this.valor1);
+                    document.write(`La raiz cuadrada de ${this.valor1} es `);
+                    this.imprimir();
+                }
+            }
+
+            const calculadora1=new Calculadora(100,20);
+            calculadora1.sumar();
+            calculadora1.restar();
+            calculadora1.multiplicar();
+            calculadora1.dividir();
+
+            const calculadoraCientifica1=new CalculadoraCientifica(6,2);
+            calculadoraCientifica1.sumar();
+            calculadoraCientifica1.restar();
+            calculadoraCientifica1.cuadrado();
+            calculadoraCientifica1.raizCuadrada();
+
+        </script>
+    </body>
+</html>

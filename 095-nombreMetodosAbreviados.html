@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 95. Nombres de métodos abreviados</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            Hemos declarado un objeto con los distintos metodos. Y luego hemos creado unas llamadas a los métodos, hasta que nos confirman, que se ha generado la cantidada deseada.
+            */
+            const jugador1={
+                nombre: 'Hugo',
+                puntos: 500,
+                imprimir(){
+                    document.write(this.nombre + '<br>');
+                    document.write(this.puntos + '<br>');
+                },
+                aumentarPuntos(valor){
+                    this.puntos=this.puntos + valor;
+                }, 
+                verificarSigno(){
+                    if(this.puntos>1000){
+                        alert('Ya has superados los 1000 puntos');
+                    }else{
+                        alert('Sigue jugando');
+                    }
+                }
+            }
+
+            jugador1.imprimir();
+            jugador1.aumentarPuntos(250);
+            jugador1.verificarSigno();
+            document.write('La situación actual es ');
+            jugador1.imprimir();
+            jugador1.aumentarPuntos(500);
+            document.write('La situación actual es ');
+            jugador1.imprimir();
+            jugador1.verificarSigno();
+
+        </script>
+    </body>
+</html>

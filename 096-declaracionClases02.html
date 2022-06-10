@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 96. Declaración de clases 02</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            /*nos aparecen los elemento unos debajos de otros, pero no están en una lista ordenada.
+
+            class listaOrdenada{
+                constructor(){
+                this.vec=[];
+            }
+            ingresar(valor){
+                this.vec.push(valor);
+            }
+            imprimir(){
+                for(let f=0;f<this.vec.length;f++){
+                    document.write(`${this.vec[f]} <br>`);
+                }
+            }
+        }
+        
+        const elemento1=new listaOrdenada();
+        elemento1.ingresar(25);
+        elemento1.imprimir();
+
+        const elemento2=new listaOrdenada();
+        elemento2.ingresar(2516);
+        elemento2.imprimir();
+
+        const elemento3=new listaOrdenada();
+        elemento3.ingresar(258);
+        elemento3.imprimir();
+
+        const elemento4=new listaOrdenada();
+        elemento4.ingresar(126);
+        elemento4.imprimir();
+
+        const elemento5=new listaOrdenada();
+        elemento5.ingresar('coche');
+        elemento5.imprimir();
+
+        const elemento6=new listaOrdenada();
+        elemento6.ingresar(Math.PI);
+        elemento6.imprimir();
+
+        */
+
+        class listaOrdenada{
+                constructor(){
+                    this.vec=[];
+            }   
+            ingresar(valor){
+                this.vec.push(valor);
+            }
+            //con este formato, cuando ejecutamos el evento imprimir, nos sale como una lista ordenada.
+            imprimir(){
+                let lista='<ol>';
+                for(let f=0;f<this.vec.length;f++)
+                    lista +=`<li>${this.vec[f]}</li>`;
+                lista +='</ol>';
+                document.write(lista);
+            }
+        }
+
+        //Al estar agregando alemento a un array, que es un solo elemento, no es necesario seguir creando estancias de la misma clase.
+        
+        const elemento1=new listaOrdenada();
+        elemento1.ingresar('Menudo lio')
+        elemento1.ingresar(25);
+        elemento1.ingresar(2516);
+        elemento1.ingresar(258);
+        elemento1.ingresar(126);
+        elemento1.ingresar('coche')
+        elemento1.ingresar(Math.PI);
+        elemento1.imprimir();
+
+        
+
+
+
+        </script>
+    </body>
+</html>
