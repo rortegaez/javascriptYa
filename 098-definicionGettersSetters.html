@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 98. Definición de getters y setters</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            //en la corrección, los parametro del constructor no correspondían con lo que acompañaba a los this. this._nombre=null, y this._edad=0 si lo cambio por los parámetro, podemos a través del constructor darle un valor, aunque luego se cambien con el getters y setters.
+            class Persona{
+                constructor(){
+                    this._nombre=null;
+                    this._edad=0;
+                }
+                get nombre(){
+                    return this._nombre;
+                }
+                set nombre(n){
+                    this._nombre=n;
+                }
+                get edad(){
+                    return this._edad;
+                }
+                set edad(e){
+                    if(e>=0){
+                        this._edad=e;
+                    }else{
+                        alert('Error, la edad es menor a 0');
+                    }
+                }
+                imprimir(){
+                    document.write(`Nombre: ${this.nombre} y edad: ${this.edad} años <br>`);
+                }
+            }
+            
+            const persona1=new Persona('Ismael', 44);
+            persona1.imprimir();
+            persona1.nombre='Pablo Sismonde';
+            persona1.edad= 58;
+            persona1.imprimir();
+
+
+        </script>
+    </body>
+</html>
