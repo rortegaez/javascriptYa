@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercico 100. Estructura repetitiva 'for of'</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            const articulos=[
+                {
+                    nombre: 'sandia',
+                    precio:12
+                },{
+                    nombre:'manzanas',
+                    precio:52
+                },{
+                    nombre:'peras',
+                    precio:40
+                },{
+                    nombre:'naranjas',
+                    precio:35
+                }
+            ]
+            
+            document.write('<h1> Listado completo de artículos.</h1>');
+                //cuando creamos esta manera de seguir el array, debemos de tener en cuenta que para llamar a los elementos del arreglo, debemos de usar el elemento que hemos creado nuevo.
+            for(let articulo of articulos){
+                document.write(`${articulo.nombre} - ${articulo.precio}€<br>`)
+            }
+
+            document.write('<br>');
+
+            document.write('<h1>Listado de artículos con un precio superior a 30€. </h1>');
+
+            for (let articulo of articulos){
+                if(articulo.precio > 30){
+                    document.write(`${articulo.nombre} - ${articulo.precio}<br>`);
+                }
+            }
+
+            document.write('<br>');
+
+            const hijos2=['Hugo','Ismael','Ulises'];
+            for(let [indice,valor] of hijos2.entries()){
+                document.write(`${valor} y ocupa la posición ${indice}<br>`);
+            }
+            
+        </script>
+    </body>
+</html>
