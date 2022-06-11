@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 99. Definición de métodos estáticos</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            class Fecha{
+                //con esta método, asignamos el mes cuando llamamos al evento y nos indica en que mes estamos.
+                static retormarMes(mes){
+                    switch(mes){
+                        case 1:
+                            return 'Enero';
+                        case 2:
+                            return 'Febrero';
+                        case 3:
+                            return 'Marzo';
+                        case 4:
+                            return 'Abril';
+                        case 5:
+                            return 'Mayo';
+                        case 6:
+                            return 'Junio';
+                        case 7:
+                            return 'Julio';
+                        case 8:
+                            return 'Agosto';
+                        case 9:
+                            return 'Septiembre';
+                        case 10:
+                            return 'Octubre';
+                        case 11:
+                            return 'Noviembre';
+                        case 12:
+                            return 'Diciembre';                      
+                    }
+                }
+                //en este método hemos creado un string, donde hemos incluido todos los metodos de la calse date para ir llamado a las datos que necesitamos. Primero hemos creado la constante fecha, ya que, hemos tenido que llamar al método Date. Y cuando hemos llamado al método, como hemos creado el string, esta todo en orden y separado por guiones.
+                static fechaCompleta(){
+                    const fecha=new Date();
+                    return `${fecha.getDate()}-${fecha.getMonth()+1}-${fecha.getDay()}`;                
+                }
+            }
+
+            document.write(`La fecha actual es ${Fecha.fechaCompleta()}<br>`);
+            document.write(Fecha.retormarMes(12));
+
+        </script>
+    </body>
+</html>
