@@ -6,7 +6,8 @@
     </head>
     <body>
         <script type="text/javascript">
-            //en la corrección, los parametro del constructor no correspondían con lo que acompañaba a los this. this._nombre=null, y this._edad=0 si lo cambio por los parámetro, podemos a través del constructor darle un valor, aunque luego se cambien con el getters y setters.
+            //en la corrección, los parametro del constructor no correspondían con lo que acompañaba a los this. this._nombre=null, y this._edad=0 si lo cambio por los parámetro, podemos a través del constructor darle un valor, aunque luego se cambien con el getters y setters. También si dejamos sin parametro al constructor y aplicamos el null y 0, consegimos el mismo resultado.
+            //el getter y el setter utilizano otro nombre, nombre y edad, ya que, cuando lo llamemos persona1.nombre, se le llamo por el nombre que se le ha dado al getters y al setters.
             class Persona{
                 constructor(){
                     this._nombre=null;

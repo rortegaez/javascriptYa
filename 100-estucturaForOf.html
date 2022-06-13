@@ -23,7 +23,7 @@
             ]
             
             document.write('<h1> Listado completo de artículos.</h1>');
-                //cuando creamos esta manera de seguir el array, debemos de tener en cuenta que para llamar a los elementos del arreglo, debemos de usar el elemento que hemos creado nuevo.
+                //cuando creamos esta manera de seguir el arreglo, debemos de tener en cuenta que para llamar a los elementos del arreglo, debemos de usar el elemento que hemos creado nuevo.
             for(let articulo of articulos){
                 document.write(`${articulo.nombre} - ${articulo.precio}€<br>`)
             }
@@ -39,7 +39,7 @@
             }
 
             document.write('<br>');
-
+            //Esta es la manera de imprimir un array completo, ya que el método .entries(), nos devuelve dos valores, que son [indice,valor] y gracias a ellos, podemos imprimir el array con el índice.
             const hijos2=['Hugo','Ismael','Ulises'];
             for(let [indice,valor] of hijos2.entries()){
                 document.write(`${valor} y ocupa la posición ${indice}<br>`);

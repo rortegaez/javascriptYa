@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 102. Map</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            const paiseshab=new Map([
+              ['China',1415045928],
+              ['India', 1354051854],
+              ['Estados Unidos', 326766748],
+              ['Indonesia', 266794980],
+              ['Brasil', 210867954],
+              ['Pakistán', 200813818],
+              ['Nigeria', 195875237]
+            ]);
+
+            //con el set, añadimos más elementos al map
+            paiseshab.set("España", 47350000);
+            paiseshab.set('Italia', 59550000);
+
+            //con el delete elimnamos elementos
+            paiseshab.delete('Pakistán');
+
+            //con el size, sabemos el tamaño del método
+            document.write(paiseshab.size);
+
+            //con el get conseguimos que nos proporcione el dato que necesitamos saber introduciendo la clave, gracias a ello podemos utilizar if, como vemos a continuación. Esto lo útilizamos de esta manera, ya que, si ponemos una clave que no esta, nos dara un dato undefined. El método has nos devuelve un true o false, si la clave esta o no.
+
+            const locpais=prompt('Introduce un país');
+            if(paiseshab.has(locpais)){
+                document.write(`El número de habitantes de ${locpais} son ${paiseshab.get(locpais)}`);
+            }else{
+                document.write(`No existes ${locpais} en la lista`);
+            }
+
+            function mostrarPaises(){
+                document.write('<ul>');
+                paiseshab.forEach((valor,clave)=>document.write(`<li>${clave} - ${valor}</li><br>`));
+                document.write('</ul>');
+            }
+            /*
+            esta es la manera como lo resuelven en los ejercicios.
+            let cadena='';
+            for(let [pais,cantidad] of paiseshab){
+                cadena +=`<li>${pais}=>${cantidad}</li>`;
+            }
+            document.getElementById("paises").innerHTML=cadena;
+            */
+           
+            mostrarPaises();
+
+        </script>
+    </body>
+</html>
